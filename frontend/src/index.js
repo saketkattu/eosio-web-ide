@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Login from './Pages/Login'
+import Register from './Pages/Register'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,
  Redirect,Switch} from 'react-router-dom'
@@ -10,6 +10,7 @@ import {BrowserRouter as Router,Route,
 ReactDOM.render(
   
     <React.StrictMode>
+   {/* */}
    <App /> 
     
   </React.StrictMode>,
