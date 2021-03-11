@@ -6,7 +6,9 @@ import Button from '@material-ui/core/Button';
 
 function App() {
   return (
+      
     <div className="App">
+    
       <h1>Blockchain based Non-Profit Hiring and Fundraising</h1>
       
       <div>

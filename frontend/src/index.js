@@ -2,16 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Register from './Pages/Register'
+import Register from './Pages/VolunteerSignUp'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router,Route,
- Redirect,Switch} from 'react-router-dom'
+ Redirect,Switch} from 'react-router-dom';
+
+
+import Login from './Pages/Login';
+import VoluntterSignUp from './Pages/VolunteerSignUp';
+import ngoSignUp from './Pages/ngoSignUp';
+import DonorSignUp from './Pages/DonorSignUp';
 
 ReactDOM.render(
   
     <React.StrictMode>
-   {/* */}
-   <App /> 
+   {/*<App />*/}
+   {/*<Login/>*/}
+   {/*<VoluntterSignUp/>*/}
+   {/* <DonorSignUp /> /*/}
+    
+   <ngoSignUp />
+   
+   
     
   </React.StrictMode>,
   document.getElementById('root')
