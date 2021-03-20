@@ -1,5 +1,6 @@
 #include<eosio/eosio.hpp>
 #include <eosio/crypto.hpp>
+#include <eosio.token.hpp>
 #include <vector>
 
 using namespace eosio;
@@ -32,10 +33,24 @@ class [[eosio::contract]] donate : public contract {
         _donor.emplace(get_self(),[&] auto &row{
             row.id=string_to_hash(name);
             row.name=name;
-            row.amount+=amount;
             row.ngo_donated.pushack(user);
 
         });
+    
+    [[eosio::on_notify("eosio.token::transfer")]]
+    void on_transfer(name user,name to,asset quantity){
+
+              check(quantity.amount>0,"Must be above 0");
+
+             _donor.modify(get_self(),[&] auto &row{
+            row.id=string_to_hash(name);
+            row.amount+=quantity;
+        
+        });
+
+
+
+}
 
 
 
