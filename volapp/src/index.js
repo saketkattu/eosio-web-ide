@@ -16,12 +16,12 @@ import DonorSignUp from './Pages/DonorSignUp';
 ReactDOM.render(
   
     <React.StrictMode>
-   {/*<App />*/}
+   {/*  <ngoSignUp />*/}
    {/*<Login/>*/}
    {/*<VoluntterSignUp/>*/}
    {/* <DonorSignUp /> /*/}
     
-   <ngoSignUp />
+   <App />
    
    
     
